@@ -37,8 +37,8 @@ document.getElementById("country-input").value = "uzbekistan";
 
 async function getData(input = "uzbekistan") {
   let url1 = `https://restcountries.com/v3.1/name/${input}?fullText=true`;
-
   let url2 = `${apiWeather.baseurl}weather?q=${input}&units=metric&APPID=${apiWeather.key}`;
+try {
   let data = await fetch(url1).then((data) => {
     return data.json();
   });
@@ -49,6 +49,10 @@ async function getData(input = "uzbekistan") {
   container_result_weather.classList.add("showState");
   showingResultsOfState(data[0]);
   showingResultsOfWeather(data2);
+} catch (e) {
+  // inputni to'ldirishni bildiruvchi xatolikni yozing
+  alert("Bu davlat topilmadi")
+}
 }
 
 function showingResultsOfState(obj) {

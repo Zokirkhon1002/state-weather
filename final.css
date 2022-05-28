@@ -308,7 +308,7 @@ input[type="text"]:focus {
 @media only screen and (max-width: 400px) {
   .container-result-state {
     width: 80vw;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -35%);
     top: 68%;
     left: 50%;
   }
@@ -328,6 +328,6 @@ input[type="text"]:focus {
   }
   .footer {
     height: 80px;
-    bottom: calc(-70vh - 100px);
+    bottom: calc(-80vh - 100px);
   }
 }
