@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #3d64e6; */
+  background-color: rgb(157, 155, 155);
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: #fff;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  font-weight: 500px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: #3d64e6;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+
+.footer h3 {
+  color: #3d64e6;
+  text-align: center;
+  font-weight: 500px;
+}
+
+.fd {
+  padding-top: 25px;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 80vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -80%);
+  top: 35%;
+  left: 50%;
+  border-radius: 0.62em;
+  box-shadow: 0px 10px 30px rgba(8, 21, 65, 0.871);
+}
+
+.container-result-state {
+  display: none;
+  background-color: #ffffff;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+  width: 45vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -40%);
+  top: 60%;
+  left: 25%;
+  border-radius: 0.62em;
+  box-shadow: 0px 10px 30px rgba(8, 21, 65, 0.871);
+}
+
+.container-result-weather {
+  display: none;
+  background-color: #2d3a8d;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+  width: 45vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-60%, -40%);
+  top: 60%;
+  left: 80%;
+  border-radius: 0.62em;
+  box-shadow: 0px 10px 30px rgba(8, 21, 65, 0.871);
+}
+.showState {
+  display: grid;
+}
+.search-wrapper {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 0.5em;
+}
+
+input[type="submit"] {
+  font-size: 1em;
+  background-color: #3d64e6;
+  color: #ffffff;
+  padding: 0.8em 0;
+  border-radius: 1.5em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.23s ease-in-out;
+}
+input[type="submit"]:hover {
+  background-color: #0b35bf;
+}
+
+input[type="text"] {
+  font-size: 1em;
+  padding: 0 0.62em;
+  border: none;
+  border-bottom: 2px solid #3d64e6;
+  outline: none;
+  color: #222a43;
+  transition: all 0.3s ease-in-out;
+}
+input[type="text"]:focus {
+  border-bottom: 2px solid #0d039f;
+}
+#result {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 20px;
+  background-color: #2a2a2a5b;
+  border-radius: 10px;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+}
+#result * {
+  line-height: 29.5px;
+}
+#result div * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#resultOfWeather div * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#resultOfWeather div {
+  background-color: #2a2a2a5b;
+  border-radius: 10px;
+}
+#resultOfWeather {
+  color: #fff;
+  padding: 10px;
+}
+#resultOfWeather * {
+  line-height: 35px;
+}
+#result div:nth-of-type(2) img {
+  box-shadow: 0px 10px 30px rgba(8, 21, 65, 0.871);
+  border-radius: 10px;
+}
+#result div:nth-of-type(2) {
+  width: 150px;
+  border-radius: 10px;
+}
+#result div h1 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+#result div p {
+  font-weight: bold;
+}
+#result div a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.flag {
+  width: 150px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer {
+  position: absolute;
+  bottom: calc(10vh - 100px);
+}
+@media only screen and (max-width: 1028px) {
+  #result div:nth-of-type(1) * {
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 1005.5px) {
+  #result div:nth-of-type(1) * {
+    line-height: 23px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  #result div:nth-of-type(1) * {
+    line-height: 21px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    padding: 2em 1em;
+  }
+  .main_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-result-state {
+    width: 80vw;
+    transform: translate(-50%, -40%);
+    top: 68%;
+    left: 50%;
+  }
+  .container-result-weather {
+    width: 80vw;
+    transform: translate(-50%, 10%);
+    top: 100%;
+    left: 50%;
+  }
+  #resultOfWeather * {
+    line-height: 45px;
+  }
+  #result {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    text-align: center;
+  }
+  #result div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #result div:nth-of-type(1) * {
+    line-height: 25px;
+  }
+  .footer {
+    position: absolute;
+    bottom: calc(-60vh - 100px);
+  }
+}
+@media only screen and (max-width: 544px) {
+  .footer {
+    height: 80px;
+    bottom: calc(-60vh - 100px);
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container-result-state {
+    width: 80vw;
+    transform: translate(-50%, -45%);
+    top: 68%;
+    left: 50%;
+  }
+  .container-result-weather {
+    transform: translate(-50%, 30%);
+    top: 100%;
+    left: 50%;
+  }
+  input[type="text"] {
+    width: 170px;
+  }
+  #resultOfWeather div {
+    width: 100%;
+  }
+  #resultOfWeather div * {
+    font-size: 19px;
+  }
+  .footer {
+    height: 80px;
+    bottom: calc(-70vh - 100px);
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>api</title>
+    <link rel="stylesheet" href="final.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Final Project</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
+    <section class="banner"></section>
+
+    <div class="container">
+      <form name="searchInput" onsubmit="event.preventDefault(); searchState()">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="country-input"
+            name="search"
+            placeholder="Enter a country name here..."
+          />
+          <input
+            onsubmit="searchState()"
+            type="submit"
+            name="submitBtn"
+            id="submitBtn"
+            value="Search"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="main_container">
+      <div class="container-result-state">
+        <div id="result"></div>
+      </div>
+      <div class="container-result-weather">
+        <div id="resultOfWeather"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <footer class="fd">
+        <h3>
+          Mirshod <span id="yearOfCopyright"></span> year Pusan National
+          University. All rights reserved.
+        </h3>
+      </footer>
+    </div>
+
+    <script src="final.js"></script>
+  </body>
+</html>
